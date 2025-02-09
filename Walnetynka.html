@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walentynka</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+        img {
+            width: 150px;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        #yes {
+            font-size: 16px;
+            padding: 10px 20px;
+            background-color: pink;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        #no {
+            font-size: 16px;
+            padding: 10px 20px;
+            background-color: lightgray;
+            border: none;
+            cursor: pointer;
+        }
+        #yay {
+            display: none;
+            font-size: 24px;
+            color: red;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Rose_PNG_Image.png/800px-Rose_PNG_Image.png" alt="Róża">
+    <h1>Czy zostaniesz moją Walentynką? 💖</h1>
+    <div class="buttons">
+        <button id="yes" onclick="sayYes()">Tak</button>
+        <button id="no" onclick="growYes()">Nie</button>
+    </div>
+    <div id="yay">Yay! 🎉</div>
+
+    <script>
+        let yesButton = document.getElementById("yes");
+        let noButton = document.getElementById("no");
+        let yayText = document.getElementById("yay");
+        let size = 16;
+        
+        function growYes() {
+            size += 10;
+            yesButton.style.fontSize = size + "px";
+            yesButton.style.padding = (size / 2) + "px";
+        }
+        
+        function sayYes() {
+            yayText.style.display = "block";
+            yesButton.style.display = "none";
+            noButton.style.display = "none";
+        }
+    </script>
+</body>
+</html>
